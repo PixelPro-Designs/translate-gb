@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responstive.css">
+    <title> Utalika Comfort</title>
+    <style>
+        
+        input.invalid {
+          background-color: #ffdddd;
+        }
+        
+        /* Hide all steps by default: */
+        .tab {
+          display: none;
+        }
+        
+        button {
+          background-color: #04AA6D;
+          color: #ffffff;
+          border: none;
+          padding: 10px 20px;
+          font-size: 17px;
+          cursor: pointer;
+          border-radius: 25px;
+        }
+        
+        button:hover {
+          opacity: 0.8;
+        }
+        
+        #prevBtn {
+          background-color: #bbbbbb;
+        }
+        
+        /* Make circles that indicate the steps of the form: */
+        .step {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbbbbb;
+          border: none;  
+          border-radius: 50%;
+          display: inline-block;
+          opacity: 0.5;
+        }
+        
+        .step.active {
+          opacity: 1;
+        }
+        
+        /* Mark the steps that are finished and valid: */
+        .step.finish {
+          background-color: #04AA6D;
+        }
+        </style>
+</head>
+<body>
+<!-- header start -->
+ <header class="header-sec" style="background: #000; padding-bottom: 30px;">
+    <div class="container">
+        <div class="row">
+            <div class="head-nav">
+                <div class="logo-box">
+                    <a href="#"><img src="images/Utsang_03.png" alt="" class="img-fluid"></a>
+                </div>
+                <div class="logo-box">
+                    <a href="#"><img src="images/Utsang_05.png" alt="" class="img-fluid"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </header>
+ <!-- header end -->
+
+<section class="application-sec">
+    <div class="container">
+        <div class="row">
+            <form id="regForm" action="/action_page.php">
+                <h1 style="text-align: center;">APPLICATION FORM</h1>
+                <!-- One "tab" for each step in the form: -->
+                <div class="tab">
+                    <div class="row align-items-center ">
+                        <div class="col-lg-12 mb-3"><h1 class="text-center">Log In</h1></div>
+                        <!-- <div class="col-lg-12 text-center mb-3">
+                            <h4>CAR PARKING SPACE PREFERENCE</h4>
+                            <small>Please refer clause 11 of General Terms & Conditions</small>
+                        </div> -->
+                        <div class="col-lg-12 text-center mb-3">
+                                <div class="contact-form contact-form-close">
+                                 <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Your Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Email Id">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Phone/Mobile Number">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 ">
+                                        <div class="form-group text-center">
+                                            <a href="javascript:void(0)" class="view-google-btn send-otp"><span><i class="fa-solid fa-arrow-right"></i></span> Apply Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-otp-area text-center">
+                                <div class="otp-icon"><img src="images/one-time-password.png" alt=""></div>
+                                <div class="otp-area text-center">
+                                    <label for="">Enter Your OTP</label>
+                                    <div class="otp-fild">
+                                        <input type="text">
+                                        <input type="text">
+                                        <input type="text">
+                                        <input type="text">
+                                    </div>
+                                    <a href="#" class="resend-otp">Resend</a>
+                                    <a href="" class="view-google-btn" style="width: 35%;"><span><i class="fa-solid fa-arrow-right"></i></span> submit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 text-center mb-3">
+                                                    <div class="ckeck-box-area" id="fst-select" style="justify-content: center;">
+                              <label>
+                                <input type="checkbox" class="radio" value="1" name="fooby[2][]" />COMFORT-I</label>
+                              <label>
+                                <input type="checkbox" class="radio" value="1" name="fooby[2][]" />COMFORT-I</label>
+                                <label>                     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="row">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 mb-3">
+                                    <h4>COMFORT-I</h4>
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                   <div class="d-flex"> 
+                                    <label>WBRERA Registration No.</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Application Form</label>
+                                    <input type="text" name="" class="form-control" placeholder="#UTC/">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Apartment # (to be filled in by the Company)</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-12 text-center mb-3">
+                                    <h4>INDIVIDUAL/JOINT APPLICATION FORM</h4>
+                                    <small>PLEASE FILL IN BLOCK LETTERS | ALL FIELDS ARE MANDATORY</small>
+                                </div>
+                                <div class="col-lg-12 mb-3">
+                                    <h5><strong>Sole/First Applicant</strong></h5>
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Affix self signed photograph</label>
+                                    <input type="file" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Full name Mr. /Ms. /Dr.</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Father/Husband’s name</label>
+                                    <input type="text" name="" class="form-control" placeholder="Mr.">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Date of birth</label>
+                                    <input type="date" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-12 mb-3">
+                                    <label>Occupation</label>
+                                    <div class="ckeck-box-area">
+                                      <label>
+                                        <input type="checkbox" class="radio" value="1" name="fooby[2][]" />Employed</label>
+                                      <label>
+                                        <input type="checkbox" class="radio" value="1" name="fooby[2][]" />Self-Employed</label>
+                                      <label>
+                                        <input type="checkbox" class="radio" value="1" name="fooby[2][]" />Housewife</label>
+                                        <label>
+                                        <input type="checkbox" class="radio" value="1" name="fooby[2][]" />Student</label>
+                                        <label>
+                                        <input type="checkbox" class="radio" value="1" name="fooby[2][]" onclick="checkMe(this.checked);" />Others</label>
+                                        <label>                     
+                                    </div>
+                                    <div id="divcheck">
+                                        <input type="text" name="" class="form-control">
+                                    </div>
+                                </div>   
+                                <div class="col-lg-6 mb-3">
+                                    <label>Profession/ Nature of business</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                                    <div class="col-lg-6 mb-3">
+                                    <label>IT PAN</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                                    <div class="col-lg-6 mb-3">
+                                    <label>Aadhar No</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                                    <div class="col-lg-6 mb-3">
+                                    <label>Permanent address</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                                    <div class="col-lg-6 mb-3">
+                                    <label>City</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                                    <div class="col-lg-6 mb-3">
+                                    <label>State</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                                    <div class="col-lg-6 mb-3">
+                                    <label>PIN</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                                    <div class="col-lg-6 mb-3">
+                                    <label>Post office</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Police station</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Police station</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Phone Home (optional)</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Work (optional)</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Mobile</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Email</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Correspondence address (for Sole/First Applicant)</label>
+                                    <input type="text" name="" class="form-control"> 
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                        <label>
+                                        <input type="checkbox" class="radio" value="1" name="fooby[2][]" style="margin-right:10px;" />Same as above</label>
+                                    <label>
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>City</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>State</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>PIN</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Post office</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Police station</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Phone Home (optional)</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Work (optional)</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label>Mobile</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label>Email</label>
+                                    <input type="text" name="" class="form-control">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="row align-items-center">
+                        <!--                     <div class="col-lg-6 mb-3">
+                                                <h4>COMFORT-I</h4>
+                                            </div> -->
+                        <!--                     <div class="col-lg-6 mb-3">
+                                               <div class="d-flex"> 
+                                                <label>WBRERA Registration No.</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            </div> -->
+                        <!--                     <div class="col-lg-6 mb-3">
+                                                <label>Application Form</label>
+                                                <input type="text" name="" class="form-control" placeholder="#UTC/">
+                                            </div> -->
+                        <!--                     <div class="col-lg-6 mb-3">
+                                                <label>Apartment # (to be filled in by the Company)</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div> -->
+                        <!--                     <div class="col-lg-12 text-center mb-3">
+                                                <h4>INDIVIDUAL/JOINT APPLICATION FORM</h4>
+                                                <small>PLEASE FILL IN BLOCK LETTERS | ALL FIELDS ARE MANDATORY</small>
+                                            </div> -->
+                                            <div class="col-lg-12 mb-3">
+                                                <h5><strong>Joint Applicant</strong></h5>
+                                            </div>
+                                            <div class="col-lg-6 mb-3">
+                                                <label>Affix self signed photograph</label>
+                                                <input type="file" name="" class="form-control">
+                                            </div>
+                                            <div class="col-lg-6 mb-3">
+                                                <label>Full name Mr. /Ms. /Dr.</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            <div class="col-lg-6 mb-3">
+                                                <label>Father/Husband’s name</label>
+                                                <input type="text" name="" class="form-control" placeholder="Mr.">
+                                            </div>
+                                            <div class="col-lg-6 mb-3">
+                                                <label>Date of birth</label>
+                                                <input type="date" name="" class="form-control">
+                                            </div>
+                                            <div class="col-lg-12 mb-3">
+                                                <label>Occupation</label>
+                                                <div class="ckeck-box-area">
+                                                  <label>
+                                                    <input type="checkbox" class="radio" value="1" name="fooby[2][]" />Employed</label>
+                                                  <label>
+                                                    <input type="checkbox" class="radio" value="1" name="fooby[2][]" />Self-Employed</label>
+                                                  <label>
+                                                    <input type="checkbox" class="radio" value="1" name="fooby[2][]" />Housewife</label>
+                                                    <label>
+                                                    <input type="checkbox" class="radio" value="1" name="fooby[2][]" />Student</label>
+                                                    <label>
+                                                    <input type="checkbox" class="radio" value="1" name="fooby[2][]" onclick="checkMe(this.checked);" />Others</label>
+                                                    <label>                     
+                                                </div>
+                                                <div id="divcheck">
+                                                    <input type="text" name="" class="form-control">
+                                                </div>
+                                            </div>   
+                                            <div class="col-lg-6 mb-3">
+                                                <label>Profession/ Nature of business</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                                                <div class="col-lg-6 mb-3">
+                                                <label>IT PAN</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                                                <div class="col-lg-6 mb-3">
+                                                <label>Aadhar No</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                                                <div class="col-lg-6 mb-3">
+                                                <label>Permanent address</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                                                <div class="col-lg-6 mb-3">
+                                                <label>City</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                                                <div class="col-lg-6 mb-3">
+                                                <label>State</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                                                <div class="col-lg-6 mb-3">
+                                                <label>PIN</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                                                <div class="col-lg-6 mb-3">
+                                                <label>Post office</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            <div class="col-lg-6 mb-3">
+                                                <label>Police station</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            <div class="col-lg-6 mb-3">
+                                                <label>Police station</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            <div class="col-lg-6 mb-3">
+                                                <label>Phone Home (optional)</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            <div class="col-lg-6 mb-3">
+                                                <label>Work (optional)</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            <div class="col-lg-6 mb-3">
+                                                <label>Mobile</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                            <div class="col-lg-6 mb-3">
+                                                <label>Email</label>
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                        </div>
+                </div>
+                <div class="tab">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 mb-3">
+                            <div class="mb-3">
+                                <label>Signature of Sole/First Applicant (Please sign within the space provided)</label>
+                            <input type="file" name="" class="form-control">
+    
+                            </div>
+                            <div class="mb-3">
+                                <label>Place</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+    
+                            <div class="mb-3">
+                                <label>Date</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="mb-3">
+                                <label>Signature of Joint Applicant (Please sign within the space provided)</label>
+                            <input type="file" name="" class="form-control">
+                            </div>
+    
+                            <div class="mb-3">
+                                <label>Place</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+    
+                            <div class="mb-3">
+                                <label>Date</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 text-center mb-3">
+                            <h4>MONTHLY FAMILY INCOME</h4>
+                            <small>Please refer clause 2 of General Terms & Conditions before filling up</small>
+                        </div>
+                        <div class="col-lg-12 text-center mb-3">
+                            <h5>Details of bank account in case of refund of application money directly into the bank account</h5>
+                            
+                        </div>
+                        <div class="col-lg-12 mb-3">
+                                <label>In Rupees</label>
+                                <input type="text" name="" class="form-control">
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <label>In favour of Mr/Ms
+                            (Sole/First Applicant
+                            name only)</label>
+                            <input type="text" name="" class="form-control">
+                        </div>
+                                            <div class="col-lg-6 mb-3">
+                            <label>Name of the bank</label>
+                            <input type="text" name="" class="form-control">
+                        </div>
+                                            <div class="col-lg-6 mb-3">
+                            <label>Branch address with PIN code</label>
+                            <input type="text" name="" class="form-control">
+                        </div>
+                                            <div class="col-lg-6 mb-3">
+                            <label>Account No</label>
+                            <input type="text" name="" class="form-control">
+                        </div>
+                                            <div class="col-lg-6 mb-3">
+                            <label>RTGS/NEFT/IFSC CODE</label>
+                            <input type="text" name="" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 text-center mb-3">
+                            <h4>CAR PARKING SPACE PREFERENCE</h4>
+                            <small>Please refer clause 11 of General Terms & Conditions</small>
+                        </div>
+                        <div class="col-lg-12 text-center mb-3">
+                                                    <div class="ckeck-box-area" style="justify-content: center;">
+                              <label>
+                                <input type="checkbox" class="radio" value="1" name="fooby[2][]" />Yes</label>
+                              <label>
+                                <input type="checkbox" class="radio" value="1" name="fooby[2][]" />No</label>
+                                <label>                     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 text-center mb-3">
+                            <h4>DECLARATION</h4>
+                        </div>
+                        <div class="col-lg-12 text-left mb-3">
+                            <p>1. I/ We hereby solemnly declare that all the foregoing facts are true to the best of my/our knowledge and nothing relevant has been concealed
+                            or suppressed. I/We also undertake to inform S.E.Builders & Realtors Limited (SEBRL) of any future changes related to the information and details
+                            shown in this APPLICATION FORM.</p>
+                            <p>2. I/ We also declare I/ we have read and understood the contents of all brochures, leaflets, inserts and terms and conditions and other information
+                            stated in the accompanying GENERAL TERMS & CONDITIONS (GTC) which form an integral part of this Application form, including Statement of
+                            Area, Number of Apartments Offered, Consideration of the Apartments and Payment Schedules. By signing this Application form, I/ We do hereby
+                            solemnly accept and agree to abide by the conditions as stipulated in the accompanying GTC, which may be modified or amended by the company
+                            from time to time.</p>
+                            <p>3. I/We, further agree to sign and execute the necessary documents as deemed necessary as and when required by the company.</p>
+                            <p>4. I/We, unconditionally agree to pay the allotment money and other amounts as per the payment plan stated in the GTC (in case I/We are allotted
+                            any apartment in terms of this application) failing which the allotment made against my application would stand cancelled as per the terms of the
+                            accompanying GTC.</p>
+                            <p>5. I/We hereby give my/our irrevocable consent to become member of a body of the owners to be formed in accordance with the applicable Acts,
+                            Rules and Bye Laws and execute necessary documents as and when required.</p>
+                            <p>7. I/We agree below, I/We provide my/our free, specific, informed, unconditional, and unambiguous consent to the collection, processing, and
+                            sharing of the following data:</p>
+                            <ul>
+                                <li>Name</li>
+                                <li>Mobile number</li>
+                                <li>E-mail address</li>
+                                <li>Aadhar number</li>
+                                <li>PAN number</li>
+                                <li>OCI number</li>
+                                <li>Electricity bill</li>
+                                <li>Cancelled cheque</li>
+                            </ul>
+                            <p>Further, I/We consent to the above data being used for the following purposes:</p>
+                            <p>To allow the banker’s representative(s) who have approved the project to call me / us on my/our mobile number for home loan.</p>
+                            <p>To follow up over phone, email and WhatsApp for various activities like registration of agreement, payment reminders, project updates etc.</p>
+                            <p>To update us on upcoming events and information about upcoming projects over phone, email and WhatsApp.</p>
+                            <p>To share email addresses and phone number with the facility management team of the project and to the group of residents for the
+                            formation of the association.</p>
+                            <p>8. <input type="checkbox" name=""> I/We have signed this APPLICATION FORM after having read and understood what is written hereinabove.</p>
+                        </div>
+                                            <div class="col-lg-6 mb-3">
+                            <div class="mb-3">
+                                <label>Signature of Sole/First Applicant (Please sign within the space provided)</label>
+                            <input type="file" name="" class="form-control">
+    
+                            </div>
+                            <div class="mb-3">
+                                <label>Place</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+    
+                            <div class="mb-3">
+                                <label>Date</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="mb-3">
+                                <label>Signature of Joint Applicant (Please sign within the space provided)</label>
+                            <input type="file" name="" class="form-control">
+                            </div>
+    
+                            <div class="mb-3">
+                                <label>Place</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+    
+                            <div class="mb-3">
+                                <label>Date</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h1 class="text-center">Company Copy</h1>
+                                <h4 class="mb-3">Pay-In-Slip</h4>
+                            <p class="mb-3">Account Title <strong>UTALIKA COMFORT PH2 COLLECTION</strong></p>
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>Date</label>
+                            <input type="date" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>Applicant’s name</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>Application Form</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>BANK</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>BRANCH</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>CITY</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>PAY ORDER/ DRAFT # & DATE</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>AMOUNT (in Rs)</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>Rupees in words</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>Deposited By</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>Total</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h1 class="text-center">Applicant Copy</h1>
+                                <h4 class="mb-3">Pay-In-Slip</h4>
+                            <p class="mb-3">Account Title <strong>UTALIKA COMFORT PH2 COLLECTION</strong></p>
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>Date</label>
+                            <input type="date" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>Applicant’s name</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>Application Form</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>BANK</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>BRANCH</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>CITY</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>PAY ORDER/ DRAFT # & DATE</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>AMOUNT (in Rs)</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>Rupees in words</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>Deposited By</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                            <label>Total</label>
+                            <input type="text" name="" class="form-control">
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <div class="row align-items-center">
+                            <div class="col-lg-12 text-center">
+                                <h1 class="mb-5">APPLICATION FORM</h1>
+                                <div class="form-submit-area">
+                                    <a href="" class="view-google-btn"><span><i class="fa-solid fa-arrow-left"></i></span>Submit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 text-center">
+                            <div class="form-submit-area">
+                                <a href="" class="view-google-btn"><span><i class="fa-solid fa-arrow-left"></i></span>Submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="overflow:auto;">
+                  <div style="float:right;">
+                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                  </div>
+                </div>
+                <!-- Circles which indicates the steps of the form: -->
+                <div style="text-align:center;margin-top:40px;">
+                  <span class="step"></span>
+                  <span class="step"></span>
+                  <span class="step"></span>
+                  <span class="step"></span>
+                  <span class="step"></span>
+                  <span class="step"></span>
+                  <span class="step"></span>
+                  <span class="step"></span>
+                  <span class="step"></span>
+                </div>
+              </form>
+        </div>
+    </div>
+</section>
+
+ <!-- section009 -->
+ <footer>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+            <ul class="footer-toper">
+                <li><p>Utalika Phase 1</p>
+                    <span>lorem ipsum dolor ipsum</span>
+                </li>
+                <li><p>Utalika Phase 1</p>
+                    <span>lorem ipsum dolor ipsum</span>
+                </li>
+                <li><p>Utalika Phase 1</p>
+                    <span>lorem ipsum dolor ipsum</span>
+                </li>
+                <li><p>Utalika Phase 1</p>
+                    <span>lorem ipsum dolor ipsum</span>
+                </li>
+                <li><p>Utalika Phase 1</p>
+                    <span>lorem ipsum dolor ipsum</span>
+                </li>
+            </ul>
+                <div class="row ">
+                    <div class="col-lg-6">
+                        <div class="footer-wiget" id="footer-ct">
+                            <a href="#" class="logo"><img src="images/Utsang_05.png" alt="" class="img-fluid"></a>
+                            <p>Ambuja Neotia is one of the most prominent and respected corporate houses headquartered in Kolkata, with its forte in real estate and subsequent forays into hospitality, healthcare and education.</p>
+                            <p>The company, under the stewardship of Harshavardhan Neotia, has been responsible for landmark projects in and around Kolkata. Udayan, Kolkata’s first condoville built on the PPP (Public-Private Partnership) model, made good living ‘affordable’ for the first time in the country ...</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="footer-wiget">
+                            <div class="space"></div>
+                            <p>
+                                <strong>Corporate Office<br></strong>
+                                Ecospace Business Park
+                                Plot – II /F/ 11 Block – 4B,
+                                3rd Floor, New Town, Rajarhat
+                                Kolkata – 700160
+                            </p>
+                            
+                            <p><a href=""><strong>phone: +91 33 40406060</strong></a></p>
+                            <p><a href="">e-mail: writetous@ambujaneotia.com</a></p>
+
+                            <ol>
+                                <li><a href="javascript:;" target="_blank" id="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="javascript:;" target="_blank" id="linkin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href="javascript:;" target="_blank" id="youtube"><i class="fa-brands fa-youtube"></i></a></li>
+                                <li><a href="javascript:;" target="_blank" id="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                              </ol>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="footer-wiget">
+                            <div class="space"></div>
+                            <p>
+                                <strong>Site Office<br></strong>
+                                Ecospace Business Park
+                                Plot – II /F/ 11 Block – 4B,
+                                3rd Floor, New Town, Rajarhat
+                                Kolkata – 700160
+                            </p>
+                            
+                            <p><a href=""><strong>phone: +91 33 40406060</strong></a></p>
+                            <p><a href="">e-mail: writetous@ambujaneotia.com</a></p>
+
+                            <ol>
+                                <li><a href="javascript:;" target="_blank" id="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="javascript:;" target="_blank" id="linkin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href="javascript:;" target="_blank" id="youtube"><i class="fa-brands fa-youtube"></i></a></li>
+                                <li><a href="javascript:;" target="_blank" id="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                              </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="copyright">
+                    <p>©Utsang 2024. All Right Reserver.</p>
+                    <p>Crafted By <a href="">Meraki Square</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+ </footer>
+ <!-- section009 -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>   
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="js/custom.js"></script>  
+    <script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+        
+        function showTab(n) {
+          // This function will display the specified tab of the form...
+          var x = document.getElementsByClassName("tab");
+          x[n].style.display = "block";
+          //... and fix the Previous/Next buttons:
+          if (n == 0) {
+            document.getElementById("prevBtn").style.display = "none";
+          } else {
+            document.getElementById("prevBtn").style.display = "inline";
+          }
+          if (n == (x.length - 1)) {
+            document.getElementById("nextBtn").innerHTML = "Submit";
+          } else {
+            document.getElementById("nextBtn").innerHTML = "Next";
+          }
+          //... and run a function that will display the correct step indicator:
+          fixStepIndicator(n)
+        }
+        
+        function nextPrev(n) {
+          // This function will figure out which tab to display
+          var x = document.getElementsByClassName("tab");
+          // Exit the function if any field in the current tab is invalid:
+          if (n == 1 && !validateForm()) return false;
+          // Hide the current tab:
+          x[currentTab].style.display = "none";
+          // Increase or decrease the current tab by 1:
+          currentTab = currentTab + n;
+          // if you have reached the end of the form...
+          if (currentTab >= x.length) {
+            // ... the form gets submitted:
+            document.getElementById("regForm").submit();
+            return false;
+          }
+          // Otherwise, display the correct tab:
+          showTab(currentTab);
+        }
+        
+        function validateForm() {
+          // This function deals with validation of the form fields
+          var x, y, i, valid = true;
+          x = document.getElementsByClassName("tab");
+          y = x[currentTab].getElementsByTagName("input");
+          // A loop that checks every input field in the current tab:
+          for (i = 0; i < y.length; i++) {
+            // If a field is empty...
+            if (y[i].value == "") {
+              // add an "invalid" class to the field:
+              y[i].className += " invalid";
+              // and set the current valid status to false
+              valid = false;
+            }
+          }
+          // If the valid status is true, mark the step as finished and valid:
+          if (valid) {
+            document.getElementsByClassName("step")[currentTab].className += " finish";
+          }
+          return valid; // return the valid status
+        }
+        
+        function fixStepIndicator(n) {
+          // This function removes the "active" class of all steps...
+          var i, x = document.getElementsByClassName("step");
+          for (i = 0; i < x.length; i++) {
+            x[i].className = x[i].className.replace(" active", "");
+          }
+          //... and adds the "active" class on the current step:
+          x[n].className += " active";
+        }
+        </script>
+</body>
+</html>
